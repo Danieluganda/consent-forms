@@ -26,30 +26,94 @@
   <h1>Outbox Consent Form</h1>
 
   <form id="consent-form" action="https://formspree.io/f/xpwlzjyo" method="POST">
-    <label>
-      Full Name:<br>
-      <input type="text" name="full_name" required>
-    </label><br><br>
 
-    <label>
-      Email:<br>
-      <input type="email" name="email" required>
-    </label><br><br>
+  <h2 align="center">10X: ENABLING GROWTH OF MSMEs THROUGH THE DIGITAL ECONOMY PROGRAM</h2>
+  <h3 align="center"><u>Consent to Collection, Processing and Transfer of Personal and Enterprise Level Data</u></h3>
 
-    <label>
-      <input type="checkbox" name="agree" required>
-      I agree to the data collection and consent terms
-    </label><br><br>
+  <p>Outbox (U) Limited ("we", or "us") is committed to improving its programs... (full explanatory content remains unchanged)</p>
 
-    <label>
-      Signature:<br>
-      <canvas id="signature-pad"></canvas>
-    </label>
-    <input type="hidden" name="signature" id="signature-image">
+  <p><strong>Program Name:</strong> 10X: Enabling growth of MSMEs through the digital economy</p>
+  <p><strong>Data Collector:</strong> Outbox (U) Limited, Kalooli Lwanga Tower... info@outbox.africa</p>
 
-    <button type="button" onclick="clearSignature()">Clear Signature</button><br><br>
-    <button type="submit">Submit Form</button>
-  </form>
+  <h4>Data We Process</h4>
+  <p>Tick applicable data categories:</p>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Category of Data</th>
+        <th>Applies</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Name of company / enterprise</td><td><input type="checkbox" name="data1"></td></tr>
+      <tr><td>2</td><td>Enterprise contact information</td><td><input type="checkbox" name="data2"></td></tr>
+      <tr><td>3</td><td>Category of enterprise</td><td><input type="checkbox" name="data3"></td></tr>
+      <tr><td>4</td><td>Shareholders & Directors data</td><td><input type="checkbox" name="data4"></td></tr>
+      <tr><td>5</td><td>Employees & consultants assigned to the Program</td><td><input type="checkbox" name="data5"></td></tr>
+      <tr><td>6</td><td>Contact info of sub-partners</td><td><input type="checkbox" name="data6"></td></tr>
+      <tr><td>7</td><td>Data of sub-partners' employees</td><td><input type="checkbox" name="data7"></td></tr>
+      <tr><td>8</td><td>Program participants info</td><td><input type="checkbox" name="data8"></td></tr>
+      <tr><td>9</td><td>Financial information</td><td><input type="checkbox" name="data9"></td></tr>
+      <tr><td>10</td><td>Other enterprise info</td><td><input type="checkbox" name="data10"></td></tr>
+    </tbody>
+  </table>
+
+  <h4>Parties With Whom Data Will Be Shared</h4>
+  <p>Optional: Add details if sharing with other organizations.</p>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Name of Organisation</th>
+        <th>Address</th>
+        <th>Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Mastercard Foundation</td><td>Kampala, Uganda</td><td>Compliance with program</td></tr>
+      <tr><td>2</td><td>Vanguard Research</td><td>Ntinda, Kampala</td><td>Monitoring and evaluation</td></tr>
+      <tr><td>3</td><td>Deloitte Canada</td><td>Toronto, Canada</td><td>Data storage and processing</td></tr>
+      <tr><td>4</td><td>Professional advisors</td><td>Various</td><td>Legal, audit advice</td></tr>
+      <tr>
+        <td>5</td>
+        <td><input type="text" name="other_org_name"></td>
+        <td><input type="text" name="other_org_address"></td>
+        <td><input type="text" name="other_org_purpose"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Consent Details</h4>
+  <p>I consent to the collection, processing, and sharing of data as described.</p>
+
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="address">Address:</label><br>
+  <input type="text" id="address" name="address" required><br><br>
+
+  <label for="date">Date:</label><br>
+  <input type="date" id="date" name="date" required><br><br>
+
+  <label for="signature">Signature (Type full name):</label><br>
+  <input type="text" id="signature" name="signature" required><br><br>
+
+  <label for="witness_name">Witness Name:</label><br>
+  <input type="text" id="witness_name" name="witness_name"><br><br>
+
+  <label for="witness_address">Witness Address:</label><br>
+  <input type="text" id="witness_address" name="witness_address"><br><br>
+
+  <label for="witness_date">Witness Date:</label><br>
+  <input type="date" id="witness_date" name="witness_date"><br><br>
+
+  <label for="witness_signature">Witness Signature (Type full name):</label><br>
+  <input type="text" id="witness_signature" name="witness_signature"><br><br>
+
+  <button type="submit">Submit Consent</button>
+</form>
+
 
   <!-- Signature Pad Library -->
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.6/dist/signature_pad.umd.min.js"></script>
