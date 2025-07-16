@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outbox Consent Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      width: 100%;
+      height: 150px;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Outbox Consent Form</h1>
+
+  <form id="consent-form" action="https://formspree.io/f/xpwlzjyo" method="POST">
+    <label>
+      Full Name:<br>
+      <input type="text" name="full_name" required>
+    </label><br><br>
+
+    <label>
+      Email:<br>
+      <input type="email" name="email" required>
+    </label><br><br>
+
+    <label>
+      <input type="checkbox" name="agree" required>
+      I agree to the data collection and consent terms
+    </label><br><br>
+
+    <label>
+      Signature:<br>
+      <canvas id="signature-pad"></canvas>
+    </label>
+    <input type="hidden" name="signature" id="signature-image">
+
+    <button type="button" onclick="clearSignature()">Clear Signature</button><br><br>
+    <button type="submit">Submit Form</button>
+  </form>
+
+  <!-- Signature Pad Library -->
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.6/dist/signature_pad.umd.min.js"></script>
+  <script>
+    const canvas = document.getElementById('signature-pad');
+    const signaturePad = new SignaturePad(canvas);
+
+    function clearSignature() {
+      signaturePad.clear();
+    }
+
+    document.getElementById('consent-form').addEventListener('submit', function (e) {
+      if (signaturePad.isEmpty()) {
+        e.preventDefault();
+        alert("Please sign before submitting.");
+      } else {
+        const dataURL = signaturePad.toDataURL();
+        document.getElementById('signature-image').value = dataURL;
+      }
+    });
+  </script>
+</body>
+</html>
